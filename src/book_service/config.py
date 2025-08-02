@@ -27,3 +27,8 @@ FEATURES = [
 # Split features into types for the preprocessor
 NUMERICAL_FEATURES = ['num_pages', 'ratings_count', 'text_reviews_count', 'publication_year']
 CATEGORICAL_FEATURES = ['language_code']
+
+# Paths for saving trained artifacts
+TRAINED_MODEL_DIR = PACKAGE_ROOT / "trained_models"
+PIPELINE_NAME = "classification_pipeline.pkl"
+PIPELINE_SAVE_PATH = TRAINED_MODEL_DIR / PIPELINE_NAME
