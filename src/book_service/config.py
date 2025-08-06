@@ -7,7 +7,8 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 PACKAGE_ROOT = Path(__file__).resolve().parent
 
 # Data directory
-DATA_DIR = PROJECT_ROOT / "data"
+DATA_DIR = PACKAGE_ROOT.parent / "data"
+
 
 # Data files
 TRAINING_DATA_FILE = "books.csv"
