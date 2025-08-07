@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Service</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Book Recommendation & Classification</h1>
+
+      <div class="card">
+        <h2>Get Recommendations</h2>
+        <p>
+          Enter a book title from the dataset (e.g., "The Hobbit" or "The
+          Catcher in the Rye").
+        </p>
+        <input type="text" id="rec-title" placeholder="Enter Book Title" />
+        <button id="rec-button">Get Recommendations</button>
+        <h3>Recommendations:</h3>
+        <ul id="recommendations-list"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Check if a Book is Highly Rated</h2>
+        <p>
+          Enter book details to predict if it's highly rated (1) or not (0).
+        </p>
+        <form id="pred-form">
+          <input
+            type="number"
+            id="num_pages"
+            placeholder="Number of Pages (e.g., 300)"
+            required
+          />
+          <input
+            type="number"
+            id="ratings_count"
+            placeholder="Ratings Count (e.g., 5000)"
+            required
+          />
+          <input
+            type="number"
+            id="text_reviews_count"
+            placeholder="Reviews Count (e.g., 1000)"
+            required
+          />
+          <input
+            type="number"
+            id="publication_year"
+            placeholder="Publication Year (e.g., 2005)"
+            required
+          />
+          <select id="language_code" required>
+            <option value="eng">English</option>
+            <option value="fre">French</option>
+            <option value="spa">Spanish</option>
+            <option value="ger">German</option>
+          </select>
+          <button type="submit">Predict Rating</button>
+        </form>
+        <h3>Prediction Result: <span id="prediction-result"></span></h3>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
